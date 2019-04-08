@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>kwik gallery</title>
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+	<style type="text/css">
+		
+		body{
+			margin: 0;
+			padding: 0;
+			overflow-y: hidden;
+		}
+
+		nav{
+			z-index: 5;
+			position: fixed;
+			top: 40%;
+			left: 1100px;
+			right: 0px;
+			margin: auto;
+			width: 80px;
+		}
+
+		nav li{
+			height: 20px;
+			margin: 20px 0px;
+			list-style: none;
+		}
+
+		nav a{
+			display: block;
+			width: 25px;
+			height:25px;
+			text-indent: -9999px;
+			border-radius: 25px;
+			background-color: transparent;
+			border:3px solid white;
+			transition: all 0.3s ease;
+			position: relative;
+			left: 0px;
+			top: 0px;
+		}
+
+		nav a:hover, nav a.active{
+			background-color: white;
+			width: 30px;
+			height: 30px;
+			left: -3px;
+			top: -2px;
+		}
+
+		.red{
+			background-image: url(pics/tiger.jpg);
+			background-size: cover;
+			background-attachment: fixed;
+		}	
+		.green{
+			background-image: url(pics/flowerlight.jpg);
+			background-size: cover;
+			background-attachment: fixed;
+		}	
+		.blue{
+			background-image: url(pics/nature.jpg);
+			background-size: cover;
+			background-attachment: fixed;
+		}	
+		.black{
+			background-image: url(pics/winter.jpg);
+			background-size: cover;
+			background-attachment: fixed;
+		}
+
+		section{
+			height: 980px;
+		}		
+
+
+	</style>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><a href="#main">one</a></li>
+			<li><a href="#second">two</a></li>
+			<li><a href="#third">one</a></li>
+			<li><a href="#fourth">two</a></li>
+			<li><a href="#fifth">one</a></li>
+		</ul>
+	</nav>
+
+	<section id="main" class="blue full-height"></section>
+	<section id="second" class="red full-height"></section>
+	<section id="third" class="green full-height"></section>
+	<section id="fourth" class="black full-height"></section>
+
+	<script type="text/javascript" src="gallery.js" ></script>
+	<script type="text/javascript">
+		$('a').smoothScroll();
+	</script>
+
+
+</body>
+</html>
